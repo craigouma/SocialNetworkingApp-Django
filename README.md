@@ -54,22 +54,29 @@
    python manage.py runserver
    ```
 7. **LogIn Page**
-
-    <img src="UI1.png">
+<p>
+<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI1.png" width="600" height = "320"/>
+</p>
 
 8. **SignUp Page**
-
-    <img src="UI2.png">
+<p>
+<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI2.png" width="600" height = "320"/>
+</p>
 
 9. **Profile Page**
-
-    <img src="UI3.png">
+<p>
+<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI3.png" width="600" height = "320"/>
+</p>
 
 10. **Django Admin Page**
-
-    <img src="UI4.png">
-    <img src="UI5.png">
+<p>
+<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI4.png" width="600" height = "320"/>
+</p>
+<p>
+<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI5.png" width="600" height = "320"/>
+</p>
 
 11. **Home Page**
-
-    <img src="UI6.png">
+<p>
+<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI6.png" width="600" height = "320"/>
+</p>
