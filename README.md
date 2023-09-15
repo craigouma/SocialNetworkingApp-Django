@@ -69,12 +69,11 @@
 </p>
 
 10. **Django Admin Page**
-<p>
-<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI4.png" width="600" height = "320"/>
-</p>
-<p>
-<img src="https://github.com/craigouma/SocialNetworkingApp-Django/blob/main/UI5.png" width="600" height = "320"/>
-</p>
+
+<img src="UI4.png"/>
+
+<img src="UI5.png"/>
+
 
 11. **Home Page**
 <p>
