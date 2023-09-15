@@ -4,11 +4,11 @@
 
 **The Project has four pages**
 
-**To display the homepage use: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+-To display the homepage use: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-**To display the login page use: [http://127.0.0.1:8000/login/](http://127.0.0.1:8000/login/)**
+-To display the login page use: [http://127.0.0.1:8000/login/](http://127.0.0.1:8000/login/)
 
-**To display the signup page use: [http://127.0.0.1:8000/signup/](http://127.0.0.1:8000/signup/)**
+-To display the signup page use: [http://127.0.0.1:8000/signup/](http://127.0.0.1:8000/signup/)
 
 # Running the Code on a Virtual Environment
 
