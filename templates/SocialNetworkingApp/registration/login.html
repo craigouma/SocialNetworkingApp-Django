@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* CSS for styling the login form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 65px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        /* Style for the login button */
+        button[type="submit"] {
+        background-color: #007bff; /* Blue color for the button */
+        color: #fff; /* Text color */
+        padding: 10px 165px; /* Padding around the button text */
+        border: none; /* No border */
+        border-radius: 3px; /* Rounded corners */
+        cursor: pointer; /* Cursor style on hover */
+    }
+
+        /* Hover effect for the button */
+         button[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+         }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="error-message">
+            {% if error_message %}
+                {{ error_message }}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

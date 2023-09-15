@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* CSS for styling the home page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .home-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Style for the newsfeed section */
+            .newsfeed {
+                margin-top: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                background-color: #f9f9f9;
+            }
+
+        /* Style for individual posts */
+            .post {
+                margin: 20px 0;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                background-color: #ffffff;
+            }
+
+        /* Style for post content */
+            .post-content {
+                margin-top: 10px;
+            }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        /* Style for navigation buttons */
+        .navigation-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .navigation-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h2>Welcome to Your Social Network</h2>
+
+        <!-- Post form -->
+        <form method="post">
+            {% csrf_token %}
+            <label for="post">Write a Post:</label>
+            <textarea id="post" name="post" rows="4" cols="50" placeholder="Share how you feel..."></textarea>
+            <button type="submit" class="navigation-button">Submit</button>
+        </form>
+
+        <!-- Newsfeed section (populate with user-generated content) -->
+        <div class="newsfeed">
+            <!-- Display user-generated posts -->
+            {% for post in user_posts %}
+            <div class="post">
+                <div class="post-content">
+                    <p>{{ post.text }}</p>
+                    <!-- Add more post content here -->
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="button-container">
+            <a href="{% url 'profile' %}" class="navigation-button">Go to Profile</a>
+            <a href="{% url 'logout' %}" class="navigation-button">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

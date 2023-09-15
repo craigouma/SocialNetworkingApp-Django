@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* CSS for styling the profile page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .user-info {
+            margin-top: 20px;
+        }
+
+        .user-info img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .bio {
+            margin-top: 10px;
+        }
+
+    .update-profile-button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 20px; /* Add margin to the top of the button */
+    }
+
+    .update-profile-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Style for the navigation buttons */
+    .navigation-buttons {
+        margin-top: 20px;
+        text-align: center; /* Center-align the buttons */
+    }
+
+    .navigation-buttons a {
+        text-decoration: none;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 0 10px; /* Add margin to both sides of the button */
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .navigation-buttons a:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>User Profile</h2>
+        <div class="user-info">
+            <img src="{% if user_profile.profile_picture %}{{ user_profile.profile_picture.url }}{% else %}media/gift-irusa.jpg{% endif %}" alt="Profile Picture">
+            <p><strong>Username:</strong> {{ user_profile.user.username }}</p>
+            <p><strong>Email:</strong> {{ user_profile.user.email }}</p>
+        </div>
+        <div class="bio">
+            <p><strong>Bio:</strong> {{ user_profile.bio }}</p>
+        </div>
+    </div>
+    <form enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ profile_form.as_p }}
+        <button class="update-profile-button" type="submit">Update Profile Picture</button>
+    </form>
+    <div class="navigation-buttons">
+        <a href="{% url 'home' %}">Home</a>
+    </div>
+</body>
+</html>
