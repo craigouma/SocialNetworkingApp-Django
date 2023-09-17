@@ -74,6 +74,7 @@
 
 <img src="UI5.png"/>
 
+<img src="UI5.png"/>
 
 11. **Home Page**
 <p>
